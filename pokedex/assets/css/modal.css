@@ -1,0 +1,195 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000089;
+  z-index: 9999;
+}
+.poke-container {
+  background-color: #fff;
+  width: 320px;
+  height: fit-content;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 10px #0000003d;
+}
+.poke-info {
+  padding: 1.5rem 1rem;
+  color: #fff;
+  border-radius: 1rem;
+  background-image: url("../imgs/pokeball.png");
+  background-position: 50% 80%;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  position: relative;
+}
+.poke-opcoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.poke-opcoes .voltar {
+  cursor: pointer;
+}
+
+.fav {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 25px;
+}
+.fav:hover {
+  box-shadow: 0px 1px 8px #fff;
+}
+.poke-info .poke-img {
+  width: 120px;
+  margin: 0 auto;
+  padding-top: 1rem;
+  position: relative;
+  bottom: -5px;
+  z-index: 99;
+}
+.poke-info .poke-img img {
+  width: 100%;
+}
+.poke {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poke-info .poke-nome {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  text-align: left;
+}
+.poke-tipos {
+  display: flex;
+}
+.poke-tipos .tipo {
+  padding: 0.3rem 0.6rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  filter: brightness(1.1);
+  margin-right: 5px;
+}
+.poke-menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2rem 0 0.3rem 0;
+}
+.poke-detalhes {
+  background-color: #fff;
+  border-radius: 1rem;
+  position: relative;
+  top: -40px;
+  padding: 0 1.5rem;
+}
+.poke-menu li {
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: #0000008d;
+  font-weight: 500;
+  padding-bottom: 0.2rem;
+}
+.poke-menu li.ativo {
+  color: #252525f0;
+  border-bottom: 2px solid #6c79db;
+  transition: none;
+}
+
+.poke-desc {
+  font-size: 0.85rem;
+  text-align: justify;
+  padding: 0.8rem 0;
+  color: #252525f0;
+}
+
+.lista {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 3px 8px #00000035;
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+}
+.lista-sobre {
+  font-size: 0.85rem;
+}
+.lista-sobre li {
+  margin-top: 0.3rem;
+}
+.left-sobre {
+  text-align: left;
+  color: #0000008d;
+}
+.right-sobre {
+  text-align: right;
+  color: #252525f0;
+}
+
+.lista-estat {
+  flex-direction: column;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #0000008d;
+}
+
+.li {
+  display: flex;
+  align-items: center;
+  height: 18px;
+  margin-top: 0.3rem;
+  position: relative;
+}
+.li li:nth-child(2) {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 100px;
+}
+.xp {
+  color: #252525f0;
+  position: absolute;
+  font-size: 0.7rem;
+  left: -30px;
+}
+.barra {
+  position: absolute;
+  border-radius: 0.8rem;
+}
+.barra::after {
+  content: "";
+  background-color: #0000001f;
+  width: 100px;
+  height: 15px;
+  display: block;
+  border-radius: inherit;
+}
+
+#movimentos {
+  overflow: auto;
+  max-height: 190px;
+}
+#movimentos ul {
+  margin: 0 auto;
+  width: 80%;
+  text-align: left;
+  padding: 0.3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#movimentos ul li {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+}
+
+#estatisticas,
+#movimentos {
+  display: none;
+}
