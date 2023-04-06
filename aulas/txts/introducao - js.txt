@@ -1,0 +1,65 @@
+comando "type nul" no terminal para criação de arquivos
+ex: type nul > index.html  = cria um arquivo index.html
+
+http é um protocolo de comunicação cliente-servidor
+subir um http localmente é simular um servidor. Onde a cada requisição há uma devolução
+
+html dá significado ao site; css dá estilo ao site; javascript dá comportamento ao site
+
+normalize css = padroniza o estilo para os diferentes navegadores
+
+a técnica mobile first economiza linhas de código na modificação para telas maiores
+
+a unidade rem é mais flexível que o px (o menos flexível de todos)
+
+a API nos serve dados
+
+entendendo o protocolo HTTP:
+URL pra pokedex = https://pokeapi.co/api/v2/pokemon/
+- composição da url: ${IP}/${path}
+path = caminho de identificação do recurso
+o domínio (https://pokeapi.co) vira IP
+
+- tipos de requisição (request method): 
+get (pega/busca)
+post (posta/insere novo item)
+put (modifica/atualiza item existente)
+delete (apaga)
+patch (atualiza parcialmente um item existente)
+
+- path params e query string:
+path params = passa um identificador, é o path em si
+ex: https://pokeapi.co/api/v2/pokemon/1
+
+query string = passa especificações para o path; é mais utilizado em buscas (por isso "query")
+ex: https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20
+
+offset seria um recurso pra paginação (como um livro virando a página) e o limit seria a quantidade limite(num livro o limite poderia ser definir quantos parágrafos por página)
+
+- headers:
+funcionam como uma configuração necessária para nossa requisição (o que faz sentido que exista para aquela requisição)
+request headers e response headers são a configuração da API
+os detalhes são em ordem de prioridade (começa com quem é prioridade e vai caindo e indicando pelo "q=[algum número]")
+
+- body:
+é o corpo de uma requisição onde serão passados dados mais robustos
+
+composição de uma requisição HTTP: URL + request method + request headers + request body
+composição da resposta de um servidor: status code (retorno de um número que representa o que ocorreu na requisição) + 
+famílias do status code: 200 (sucesso), 300 (redirect), 400 (erro do lado do cliente), 500 (erro do lado do servidor)...
+
+//
+fetch: por padrão, o fetch usa o método GET
+processamento assíncrono: quando a resposta não é devolvida imediatamente
+promise: promessa de um resposta (de uma response), por mais que não seja de imediato
+then() para sucesso de resposta
+catch() para erro de resposta
+finally() para resposta final independentemente se deu sucesso ou erro
+
+o then()...catch()...finally() tem estrutura similar ao do try()...catch()...finally()
+o json() vai converter a resposta da requisição num objeto JSON, para que possamos manipular e trabalhar como um objeto javascript
+encadeamento dos then()'s: os then() seguidos um do outro pegam sempre o retorno do then() anterior; vai transformando as respostas
+
+obs.: se um arquivo js faz referência a outro arquivo js, este deverá ser importado no html antes daquele, para que possa ser processado primeiro, fazendo sentido ser usado no próximo
+
+Promise.all() = array de promises

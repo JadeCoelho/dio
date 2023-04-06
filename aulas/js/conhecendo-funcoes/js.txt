@@ -1,0 +1,1 @@
+funções sem retorno são chamadas de procedimentos

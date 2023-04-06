@@ -1,0 +1,1 @@
+abstração dos problemas para não precisar detalhar cada variavel (exemplo do uso de números para representar condições)

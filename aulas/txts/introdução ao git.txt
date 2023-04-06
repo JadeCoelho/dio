@@ -1,0 +1,50 @@
+introdução ao git 
+
+no prompt de comando:
+- dir = mostra os diretórios
+- cd = entra num local 
+- cd .. = volta uma pasta 
+- cls = "clear screen" = limpa a tela do prompt de comando
+- mkdir = "make directory" = criar diretório = cria uma nova pasta 
+- echo [alguma coisa] = retorna "[alguma coisa]" na saída do terminal
+- > = envia um dado para outro (para uma pasta, um arquivo)
+ setas pra cima (volta) e pra baixo (adianta) no teclado navegam pelos comandos usados recentemente
+- del [nome da pasta] = remove tudo o que tem dentro da pasta (os arquivos dentro da pasta, mas não a pasta)
+- rmdir [nome da pasta] = remove a pasta em si, remove tudo (os arquivos da pasta e a pasta)
+
+
+como o git funciona por baixo dos panos: 
+
+sha1 = é uma forma de representar um arquivo, onde há uma geração de chave de caracteres com 40 dígitos (bem embaralhada) em cada modificação num arquivo, e cada mudança tem uma chave. Logo, se uma mudança for desfeita, voltará a ter como chave a anteriormente gerada
+
+no git bash:
+- openssl sha1 [nome de um arquivo] = retorna a chave gerada pra esse arquivo 
+
+
+objetos internos do git:
+- blobs = bloco básico de composição, bolha que armazena um arquivo; tem o sha1 do arquivo; encapsulam o comportamento dos diretórios
+ex: echo 'conteudo' | git hash-project stdin == echo -e 'blob 9\0conteudo' | openssl sha1
+blob tamanho \0
+
+- trees = monta a estrutura de onde estão localizados os arquivos; aponta para os blobs (os arquivos) ou para outras árvores; tem o sha1 do metadado
+
+mudando algo de um blob, muda a tree desse blob tbm, porque mexe na estrutura, leitura e encriptação
+
+- commits = junta tudo; seu sha1 é o hash de toda a informação; aponta para a tree, para o parente, para o autor, para a msg, para os timestamps (carimbos de tempo)
+
+
+segurança do git e confiabilidade das versões e a forma com as estruturas do git foram feitas
+
+ls -a = lista arquivos ocultos (-a)
+
+md = markdown = linguagem mais "humanizada" para se escrever códigos html
+
+untracked = git não tem conhecimento da existência de um arquivo
+tracked = arquivos que o git já conhece. se subdivide em (ciclo do git):
+unmodified = arquivo sem modificação
+modified = arquivo que foi modificado
+staged = arquivos que já estão "se preparando", prontos para subir, para serem commitados, para "entrarem no palco"
+
+só vai para o repositório local aquilo que foi commitado
+
+resolução de conflitos no github, comparação de arquivos modificados e merge
