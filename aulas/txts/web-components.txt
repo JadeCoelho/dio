@@ -5,3 +5,26 @@ hierarquia
 o navegador é quem tem o controle da árvore
 shadow dom é uma sub-árvore criada dentro da árvore, um documento dentro de outro documento, onde podemos controlá-la
 encapsulamento
+
+o super() dentro do constructor herda tudo do constructor() da classe extendida
+
+exemplo simples de criação de uma tag via js:
+
+class CardNews extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: "open" });
+    shadow.innerHTML = "<h1>Hello world</h1>";
+  }
+}
+customElements.define("card-news", CardNews);
+
+primeiro é criado uma classe que extende o próprio documento HTML. Dentro do constructor da classe criada, coloca o super() pra herdar o constructor da classe extendida. Cria-se uma const onde será anexada a sombra (attachShadow). O modo open permite a abertura do documento pra outros javascripts agirem nele, ou edição (?), e é o modo padrão. Caso seja closed, apenas a pessoa que está manipulando a shadow pode modificá-lo, controlá-lo. Depois coloca na const o que quiser que exista nesse documento-sombra. E por fora o customElements vai ser usado pra nomear um seletor e indicar o documento correspondente, onde tem o conteúdo.
+
+component = encapsulamento/conjunto de elementos, além de ser possível definir estilos e props (propriedades lógicas) exclusivos
+component é o javascript que retorna mais html, css e js
+
+uma vantagem é se tratar de um "mundo à parte, isolado", uma "cápsula", podendo ser desenvolvido e exportado e não afetar em nada nos demais scripts
+todo seletor necessita de um hifen
+
+quando é uma ideia legal componentizar: quando há várias repetições de códigos, para reaproveitamento (da base) destes
