@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/card.css" />
+    <script src="src/components/card-news.js" defer></script>
+    <!-- <script src="src/components/titulo-dinamico.js" defer></script> -->
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div class="card">
+        <div class="card-left">
+          <span>By Jade Mattos</span>
+          <a href="#">Aracy Balabanian contrata devs</a>
+          <p>
+            Aracy Balabanian procura desenvolvedores que saibam trabalhar com
+            componentização.
+          </p>
+        </div>
+        <div class="card-right">
+          <img
+            src="https://pbs.twimg.com/media/E94vHcyWYAATpBG?format=jpg&name=900x900"
+            alt=""
+          />
+        </div>
+      </div> -->
+      <card-news
+        autor="Jade Mattos"
+        titulo="Aracy Balabanian contrata devs"
+        conteudo="Aracy Balabanian procura desenvolvedores que saibam trabalhar com componentização."
+        url="https://www.google.com/"
+        src="https://pbs.twimg.com/media/E94vHcyWYAATpBG?format=jpg&name=900x900"
+      ></card-news>
+      <card-news
+        autor="Yuri de Lemos"
+        titulo="A moda dos helicópteros de combate"
+        conteudo="Saiba mais sobre a nova tendência que está bombando nas redes sociais."
+        url="https://www.google.com/"
+        src="https://images.freeimages.com/images/premium/previews/3696/36960910-military-helicopter-pilot.jpg"
+      ></card-news>
+    </div>
+  </body>
+</html>

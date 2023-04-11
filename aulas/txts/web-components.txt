@@ -1,0 +1,7 @@
+o processo de renderização do html no browser (parsed) se dá pelo desenho/modelo de árvore, o DOM (document object model).
+armazenamento da memória com elementos sendo ramificações da árvore
+por isso a noção de pai, filho, irmãos...
+hierarquia
+o navegador é quem tem o controle da árvore
+shadow dom é uma sub-árvore criada dentro da árvore, um documento dentro de outro documento, onde podemos controlá-la
+encapsulamento
